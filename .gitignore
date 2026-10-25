@@ -1,0 +1,17 @@
+# Entorno virtual
+venv/
+
+# Variables de entorno (secretas)
+.env
+
+# Archivos de Python generados automáticamente
+__pycache__/
+*.pyc
+
+# Base de datos local y archivos subidos
+db.sqlite3
+media/
+
+# Archivos del sistema y del editor
+.DS_Store
+.vscode/
