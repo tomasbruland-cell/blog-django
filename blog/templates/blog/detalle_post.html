@@ -1,0 +1,15 @@
+<h2>{{ post.titulo }}</h2>
+<p>Por {{ post.autor.username }} - {{ post.fecha }}</p>
+
+{% if post.imagen %}
+    <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}" width="400">
+{% endif %}
+
+<p>{{ post.contenido }}</p>
+
+{% if user == post.autor %}
+    <a href="{% url 'editar_post' post.pk %}">Editar</a>
+    <a href="{% url 'eliminar_post' post.pk %}">Eliminar</a>
+{% endif %}
+
+<a href="{% url 'lista_posts' %}">Volver</a>

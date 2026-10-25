@@ -1,0 +1,25 @@
+{% if user.is_authenticated %}
+    <p>Hola, {{ user.username }}</p>
+    <a href="{% url 'crear_post' %}">Nuevo post</a>
+    <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Cerrar sesión</button>
+    </form>
+{% else %}
+    <a href="{% url 'login' %}">Iniciar sesión</a>
+    <a href="{% url 'registro' %}">Registrarse</a>
+{% endif %}
+<h1>Mi Blog</h1>
+
+{% for post in posts %}
+    <article>
+        <h2><a href="{% url 'detalle_post' post.pk %}">{{ post.titulo }}</a></h2>
+        <p>Por {{ post.autor.username }} - {{ post.fecha }}</p>
+        {% if post.imagen %}
+            <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}" width="300">
+        {% endif %}
+        <p>{{ post.contenido }}</p>
+    </article>
+{% empty %}
+    <p>Todavía no hay posts.</p>
+{% endfor %}
