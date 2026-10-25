@@ -26,7 +26,7 @@ Se necesita tener instalado Python 3 y Git.
 **1. Clonar el repositorio y entrar a la carpeta**
 
 ```
-git clone <<< CAMBIAR: URL de tu repositorio >>>
+git clone    git clone https://github.com/tomasbruland-cell/blog-django.git
 cd blog-django
 ```
 
