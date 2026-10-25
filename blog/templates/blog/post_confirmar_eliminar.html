@@ -1,3 +1,5 @@
+{% extends 'blog/base.html' %}
+{% block content %}
 <h1>Eliminar post</h1>
 
 <p>¿Seguro que querés eliminar "{{ post.titulo }}"? Esta acción no se puede deshacer.</p>
@@ -8,3 +10,4 @@
 </form>
 
 <a href="{% url 'detalle_post' post.pk %}">Cancelar</a>
+{% endblock %}

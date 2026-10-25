@@ -1,3 +1,5 @@
+{% extends 'blog/base.html' %}
+{% block content %}
 <h2>{{ post.titulo }}</h2>
 <p>Por {{ post.autor.username }} - {{ post.fecha }}</p>
 
@@ -13,3 +15,4 @@
 {% endif %}
 
 <a href="{% url 'lista_posts' %}">Volver</a>
+{% endblock %}

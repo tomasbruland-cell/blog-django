@@ -1,0 +1,103 @@
+:root {
+    --azul: #2563eb;
+    --azul-oscuro: #1d4ed8;
+    --fondo: #f3f4f6;
+    --texto: #1f2937;
+    --gris: #6b7280;
+    --borde: #e5e7eb;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Menú */
+nav {
+    background: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 12px 18px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav a:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+nav span {
+    margin-left: auto;
+    color: var(--gris);
+}
+
+nav form {
+    margin: 0;
+}
+
+/* Posts */
+article {
+    background: white;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 22px;
+    margin-bottom: 22px;
+    transition: box-shadow 0.2s;
+}
+
+article:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+article h1,
+article h2 {
+    margin-top: 0;
+}
+
+article h2 a {
+    color: var(--texto);
+}
+
+article img {
+    display: block;
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 14px 0;
+}
+
+/* Botones */
+button {
+    background: var(--azul);
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--azul-oscuro);
+}
